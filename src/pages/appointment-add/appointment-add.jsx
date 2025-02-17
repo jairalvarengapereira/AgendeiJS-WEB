@@ -158,113 +158,102 @@ function AppointmentAdd(){
         {/* Pacientes */}
         <div className="col-12 mt-4">
           <label htmlFor="user" className="form-label">Paciente</label>
-          <div className="form-control">
-            <select 
-              name="user" 
-              id="user" 
-              className="form-select"
-              value={idUser}
-              onChange={(e) => setIdUser(e.target.value)}           
-            >
-              <option value="">Selecione o paciente</option>{
-                users.map((u) => (
-                  <option key={u.id_user} value={u.id_user}>
-                    {u.name}
-                  </option>
-                ))
-              }
-            </select>
-          </div>          
+          <select 
+            name="user" 
+            id="user" 
+            className="form-select"
+            value={idUser}
+            onChange={(e) => setIdUser(e.target.value)}           
+          >
+            <option value="">Selecione o paciente</option>{
+              users.map((u) => (
+                <option key={u.id_user} value={u.id_user}>
+                  {u.name}
+                </option>
+              ))
+            }
+          </select>
         </div>
 
         {/* Médicos */}
         <div className="col-12 mt-4">
           <label htmlFor="doctor" className="form-label">Médico</label>
-          <div className="form-control">
-            <select 
-              name="doctor" 
-              id="doctor" 
-              className="form-select"
-              value={idDoctor}
-              onChange={(e) => setIdDoctor(e.target.value)}  
-            >
-              <option value="">Selecione o médico</option>{
-                doctors.map((doc) => (
-                  <option key={doc.id_doctor} value={doc.id_doctor}>
-                    {doc.name}
-                  </option>
-                ))
-              }
-            </select>
-          </div>          
+          <select 
+            name="doctor" 
+            id="doctor" 
+            className="form-select"
+            value={idDoctor}
+            onChange={(e) => setIdDoctor(e.target.value)}  
+          >
+            <option value="">Selecione o médico</option>{
+              doctors.map((doc) => (
+                <option key={doc.id_doctor} value={doc.id_doctor}>
+                  {doc.name}
+                </option>
+              ))
+            }
+          </select>
         </div>
 
         {/* Serviços */}
         <div className="col-12 mt-3">
           <label htmlFor="service" className="form-label">Serviços</label>
-          <div className="form-control">
-            <select 
-              name="service" 
-              id="service" 
-              className="form-select"
-              value={idService}
-              onChange={(e) => setIdService(e.target.value)}  
-            >
-              <option value="">Selecione o serviço</option>{
-                services.map((s) => (
-                  <option key={s.id_service} value={s.id_service}>
-                    {s.description}
-                  </option>
-                ))
-              }
-            </select>
-          </div>          
+          <select 
+            name="service" 
+            id="service" 
+            className="form-select"
+            value={idService}
+            onChange={(e) => setIdService(e.target.value)}  
+          >
+            <option value="">Selecione o serviço</option>{
+              services.map((s) => (
+                <option key={s.id_service} value={s.id_service}>
+                  {s.description}
+                </option>
+              ))
+            }
+          </select>
         </div>
 
         {/* Data */}        
         <div className="col-6 mt-3">
           <label htmlFor="bookingDate" className="form-label">Data</label>
-          <div className="form-control mb-2">
-            <input 
-              type="date" 
-              id="bookingDate" 
-              name="bookingDate" 
-              className="form-control"
-              value={bookingDate}
-              onChange={(e) => setBookingDate(e.target.value)}   
-            />
-          </div>
+          <input 
+            type="date" 
+            id="bookingDate" 
+            name="bookingDate" 
+            className="form-control"
+            value={bookingDate}
+            onChange={(e) => setBookingDate(e.target.value)}   
+          />
         </div>
 
         {/* Hora */}
         <div className="col-6 mt-3">
           <label htmlFor="bookingHour" className="form-label">Horário</label>
-          <div className="form-control mb-2">
-            <select 
-              name="bookingHour" 
-              id="bookingHour" 
-              className="form-select"
-              value={bookingHour}
-              onChange={(e) => setBookingHour(e.target.value)}  
-            >
-              <option value="">Horário</option>
-              <option value="08:00">08:00</option>
-              <option value="08:30">08:30</option>
-              <option value="09:00">09:00</option>
-              <option value="09:30">09:30</option>
-              <option value="10:00">10:00</option>
-              <option value="10:30">10:30</option>
-              <option value="11:00">11:00</option>
-              <option value="11:30">11:30</option>
-              <option value="14:00">14:00</option>
-              <option value="14:30">14:30</option>
-              <option value="15:00">15:00</option>
-              <option value="15:30">15:30</option>
-              <option value="16:00">16:00</option>
-              <option value="16:30">16:30</option>
-            </select>
-          </div>
-
+          <select 
+            name="bookingHour" 
+            id="bookingHour" 
+            className="form-select"
+            value={bookingHour}
+            onChange={(e) => setBookingHour(e.target.value)}  
+          >
+            <option value="">Horário</option>
+            <option value="08:00">08:00</option>
+            <option value="08:30">08:30</option>
+            <option value="09:00">09:00</option>
+            <option value="09:30">09:30</option>
+            <option value="10:00">10:00</option>
+            <option value="10:30">10:30</option>
+            <option value="11:00">11:00</option>
+            <option value="11:30">11:30</option>
+            <option value="14:00">14:00</option>
+            <option value="14:30">14:30</option>
+            <option value="15:00">15:00</option>
+            <option value="15:30">15:30</option>
+            <option value="16:00">16:00</option>
+            <option value="16:30">16:30</option>
+          </select>
         </div>
 
         <div className="col-12 mt-4">
